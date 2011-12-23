@@ -1,32 +1,33 @@
-$font-default: 13px "Lucida Grande";
-$font-header: 25px "Georgia";
-$font-monospaced: 13px Menlo,Monaco,Courier;
-
 @mixin schnitzel-typography {
   body {
     font: $font-default;
   }
-  
+
   p, li {
     line-height: 23px;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
     margin-top: 1.5em;
   }
-  
+
+  h2 {
+    background-color: $color-text;
+    color: $color-page-background;
+    display: inline;
+    padding: 0.3em 0.6em;
+    margin: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    a { color: $color-page-background; text-decoration: none }
+  }
+
   h1 {
-    font-size: 2em;
-    border-bottom: 10px solid #ccc;
+    font-size: 1.6em;
     text-transform: uppercase;
   }
-  
-  h2 {
-    font-size: 1.5em;
-    border-bottom: 2px solid #ccc;
-  }
-  
+
   pre {
     font: $font-monospaced;
   }

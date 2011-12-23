@@ -1,6 +1,6 @@
 @mixin schnitzel-grid-column($num, $margin: 1.25%, $padding: 0%) {
   $width: (100% + $margin) / 12;
-  
+
   width: $num * $width - $margin - 2 * $padding;
   margin-left: $margin;
 }
@@ -13,11 +13,11 @@
 
 @mixin schnitzel-grid-row($margin: 1.25%, $padding: 0%) {
   @include micro-clearfix-hack;
-  
+
   // .column, .columns {
   //   float: left;
   //   padding: $padding;
-    
+
   //   &:first-child { margin-left: 0 }
   // }
   // .one    { @include schnitzel-grid-column(1, $margin, $padding); }
@@ -37,7 +37,6 @@
 @mixin schnitzel-grid {
   .container {
     margin: 0 auto;
-    width: 960px;
 
     .row {
       @include schnitzel-grid-row;

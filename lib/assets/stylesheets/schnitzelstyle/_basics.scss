@@ -1,8 +1,13 @@
 @mixin schnitzel-basics {
+  body {
+    background-color: $color-page-background;
+    color: $color-text;
+  }
+
   strong {
     font-weight: bold;
   }
-  
+
   nav {
     background-color: black;
     color: white;
@@ -10,8 +15,8 @@
 
   footer {
     color: #999;
-  }  
-  
+  }
+
   a {
     color: #c60;
   }
@@ -28,7 +33,7 @@
   ul {
     list-style-type: square;
     li { margin: 0 0 1em 1.2em }
-  }  
+  }
 }
 
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */
