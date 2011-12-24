@@ -42,7 +42,7 @@
       font: $font-headlines;
       font-size: 200%;
       font-weight: bold;
-      @include floaty-title(white, #4ea4ec);
+      @include floaty-title(white, $color-header);
     }
   }
 
