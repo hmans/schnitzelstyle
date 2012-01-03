@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 # Additional gems required by the demo site.
+gem 'rack-cache'
 gem 'haml'
 gem 'serve'
 gem 'thin'
