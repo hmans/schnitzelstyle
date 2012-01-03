@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'bundler/setup'
+
+require 'schnitzelstyle'
 require 'serve'
 require 'rack/cache'
 
