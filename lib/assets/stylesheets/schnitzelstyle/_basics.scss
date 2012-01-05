@@ -28,7 +28,7 @@
   }
 
   .container>header {
-    padding: 2em 0;
+    margin: 2em 0;
     color: #999;
     h1 {
       font: $font-headlines;
@@ -50,7 +50,7 @@
   *:last-child { margin-bottom: 0 !important }
 
   article, section {
-    padding: 2em 0;
+    margin: 4em 0;
 
     p, dl, ol, ul, li {
       margin: 0.8em 0;
