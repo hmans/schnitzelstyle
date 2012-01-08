@@ -1,9 +1,13 @@
-$font-default: 13px "Lucida Grande";
-$font-headlines: $font-default;
-$font-footer: 11px "Lucida Grande";
-$font-monospaced: 13px Menlo,Monaco,Courier;
+$font-default:    13px "Lucida Grande" !default;
+$font-header:  $font-default !default;
+$font-footer:     $font-default !default;
+$font-monospaced: 13px Menlo,Monaco,Courier !default;
 
-$color-page-background: white;
-$color-text: #555;
-$color-link: #000;
-$color-header: #4ea4ec;
+$color-page-background: white !default;
+$color-text:            #555 !default;
+$color-footer:          #999 !default;
+$color-header:          #4ea4ec !default;
+
+$color-link:            $color-text !default;
+$color-link-underline:  lighten(complement($color-header), 10%) !default;
+$color-link-hover:      darken($color-link, 20%) !default;

@@ -29,21 +29,29 @@
 
   .container>header {
     margin: 2em 0;
-    color: #999;
+
+    color: $color-header;
+    font: $font-header;
+    font-size: 120%;
+    line-height: 150%;
+
     h1 {
-      font: $font-headlines;
+      margin-bottom: 0.5em;
+
+      font: $font-header;
       font-size: 200%;
       font-weight: bold;
-      @include floaty-title(white, $color-header);
+      @include floaty-title($color-page-background, $color-header);
     }
   }
 
   .container>footer {
     font: $font-footer;
+    font-size: 70%;
     padding: 5em 0;
-    color: #999;
+    color: $color-footer;
     text-align: right;
-    a { color: #999; }
+    a { color: $color-footer; }
   }
 
   *:first-child { margin-top: 0 !important }
@@ -63,12 +71,12 @@
     }
 
     a {
-      color: $color-text;
+      color: $color-link;
       text-decoration: none;
-      border-bottom: 2px solid #fc9;
+      border-bottom: 2px solid $color-link-underline;
 
       &:hover {
-        color: #000;
+        color: $color-link-hover;
       }
     }
 
@@ -86,7 +94,7 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font: $font-headlines;
+      font: $font-header;
       margin-top: 1em;
       @include floaty-title($color-text, lighten($color-text, 50%));
     }
