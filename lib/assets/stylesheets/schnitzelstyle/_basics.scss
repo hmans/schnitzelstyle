@@ -47,7 +47,7 @@
 
   .container>footer {
     font: $font-footer;
-    font-size: 70%;
+    font-size: 75%;
     padding: 5em 0;
     color: $color-footer;
     text-align: right;
@@ -59,6 +59,16 @@
 
   article, section {
     margin: 4em 0;
+
+    header {
+      margin-bottom: 1em;
+
+      h2 {
+        @include floaty-title($color-page-background, $color-text);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+      }
+    }
 
     p, dl, ol, ul, li {
       margin: 0.8em 0;
@@ -100,7 +110,7 @@
     }
 
     h1 {
-      font-size: 1.6em;
+      font-size: 150%;
       text-transform: uppercase;
     }
 
@@ -126,16 +136,6 @@
       padding-left: 1em;
       font-style: italic;
       border-left: 5px solid #eee;
-    }
-
-    header {
-      margin-bottom: 1em;
-
-      h2 {
-        @include floaty-title($color-page-background, $color-text);
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-      }
     }
   }
 }
