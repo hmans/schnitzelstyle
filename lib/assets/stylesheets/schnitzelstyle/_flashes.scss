@@ -1,0 +1,7 @@
+@mixin schnitzel-flashes {
+  #flashes {
+    .alert {
+      color: red;
+    }
+  }
+}

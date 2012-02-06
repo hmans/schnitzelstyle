@@ -1,0 +1,25 @@
+@mixin schnitzel-forms {
+  form {
+    div.input {
+      label {
+        display: block;
+        color: $color-header;
+        font: $font-footer;
+        font-size: 80%;
+        font-weight: bold;
+      }
+
+      input {
+        font: $font-default;
+        padding: 2px 4px;
+      }
+
+      span.error {
+        display: block;
+        color: $color-4;
+        font: $font-footer;
+        font-size: 80%;
+      }
+    }
+  }
+}

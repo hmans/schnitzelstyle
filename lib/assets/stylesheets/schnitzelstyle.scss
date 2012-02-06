@@ -1,10 +1,14 @@
 @import 'schnitzelstyle/configuration';
 @import 'schnitzelstyle/reset';
 @import 'schnitzelstyle/basics';
+@import 'schnitzelstyle/flashes';
+@import 'schnitzelstyle/forms';
 @import 'schnitzelstyle/grid';
 @import 'schnitzelstyle/export';
 
 @mixin schnitzel-complete {
   @include schnitzel-reset;
   @include schnitzel-basics;
+  @include schnitzel-flashes;
+  @include schnitzel-forms;
 }

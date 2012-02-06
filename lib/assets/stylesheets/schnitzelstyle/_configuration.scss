@@ -10,6 +10,7 @@ $color-0: white !default;
 $color-1: #555 !default;
 $color-2: #999 !default;
 $color-3: #4ea4ec !default;
+$color-4: complement($color-3);
 
 // apply colors to basic page elements
 $color-page-background: $color-0 !default;
@@ -18,5 +19,5 @@ $color-footer:          $color-2 !default;
 $color-header:          $color-3 !default;
 
 $color-link:            $color-text !default;
-$color-link-underline:  lighten(complement($color-header), 10%) !default;
+$color-link-underline:  lighten($color-4, 10%) !default;
 $color-link-hover:      darken($color-link, 20%) !default;
