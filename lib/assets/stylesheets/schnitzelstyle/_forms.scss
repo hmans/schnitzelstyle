@@ -1,6 +1,10 @@
 @mixin schnitzel-forms {
   form {
+    margin: 0.5em 0;
+
     div.input {
+      margin: 0.5em 0;
+
       label {
         display: block;
         color: $color-header;
@@ -12,6 +16,13 @@
       input {
         font: $font-default;
         padding: 2px 4px;
+        width: 600px;
+      }
+
+      textarea {
+        font: $font-default;
+        padding: 2px 4px;
+        width: 600px;
       }
 
       span.error {
