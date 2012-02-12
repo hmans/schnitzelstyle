@@ -1,0 +1,44 @@
+@mixin box-shadow($x: 0, $y: 1px, $r: 2px, $color: rgba(0,0,0,.2)) {
+  -webkit-box-shadow: $x $y $r $color;
+  -moz-box-shadow: $x $y $r $color;
+  box-shadow: $x $y $r $color;
+}
+
+@mixin button($color: #f93, $radius: 4px) {
+  $text-color: lighten($color, 50%);
+
+  padding: 2px 8px;
+
+  /* button basics */
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  @include box-shadow(0, 1px, 2px, rgba(0,0,0,.2));
+
+  /* colors */
+  color: $text-color;
+  border: solid 1px darken($color, 20%);
+  @include gradient($color);
+
+  &:hover {
+    color: $text-color;
+    @include box-shadow(0, 1px, 2px, rgba(0,0,0,.5));
+  };
+}
+
+@mixin gradient($color) {
+  $color-from: lighten($color, 12%);
+  $color-to: darken($color, 12%);
+
+  background: $color-to;
+  background: -webkit-gradient(linear, left top, left bottom, from($color-from), to($color-to));
+  background: -moz-linear-gradient(top, $color-from, $color-to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+
+@mixin schnitzel-eyecandy {
+  .button { @include button }
+  .button.red { @include button(#c66) }
+  .button.green { @include button(#6c6) }
+}
