@@ -19,6 +19,11 @@
         width: 600px;
       }
 
+      select, option {
+        font: $font-default;
+        padding: 2px 4px;
+      }
+
       textarea {
         font: $font-default;
         padding: 2px 4px;
@@ -31,6 +36,10 @@
         font: $font-footer;
         font-size: 80%;
       }
+    }
+
+    div.input.radio {
+      input { width: 20px; }
     }
 
     div.buttons {
