@@ -32,5 +32,13 @@
         font-size: 80%;
       }
     }
+
+    div.buttons {
+      input {
+        @include button;
+        font-size: 100%;
+        padding: 4px 10px;
+      }
+    }
   }
 }
