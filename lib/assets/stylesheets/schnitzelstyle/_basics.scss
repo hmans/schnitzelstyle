@@ -137,6 +137,9 @@
     pre {
       display: block;
       padding: 0.5em;
+      overflow: scroll;
+
+      code { padding: 0; }
     }
 
     blockquote {
