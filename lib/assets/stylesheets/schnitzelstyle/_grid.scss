@@ -12,6 +12,7 @@
 
 @mixin row {
   @include clearfix;
+  margin-bottom: 5px;
 }
 
 @mixin columns($num, $margin: 1.25%, $padding: 0%) {
