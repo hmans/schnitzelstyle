@@ -21,3 +21,5 @@ $color-header:          $color-3 !default;
 $color-link:            $color-text !default;
 $color-link-underline:  lighten($color-4, 10%) !default;
 $color-link-hover:      darken($color-link, 20%) !default;
+
+$color-error: #d33 !default;

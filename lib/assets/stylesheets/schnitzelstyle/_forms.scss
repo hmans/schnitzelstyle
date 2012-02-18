@@ -30,9 +30,16 @@
         width: 600px;
       }
 
-      span.error {
+      .error {
         display: block;
-        color: $color-4;
+        color: $color-error;
+        font: $font-footer;
+        font-size: 80%;
+      }
+
+      .hint {
+        display: block;
+        color: $color-2;
         font: $font-footer;
         font-size: 80%;
       }
@@ -49,5 +56,12 @@
         padding: 4px 10px;
       }
     }
+  }
+
+  ::-webkit-input-placeholder {
+    color: #ccc;
+    font: $font-footer;
+    font-size: 80%;
+    padding-top: 2px;
   }
 }
