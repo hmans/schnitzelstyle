@@ -19,6 +19,11 @@
     font: $font-default;
   }
 
+  /* set body class to 'loading' to switch the curser to a 'loading' cursor. */
+  html.loading, html.loading * {
+    cursor: wait !important;
+  }
+
   a {
     color: $color-link;
   }
