@@ -118,7 +118,7 @@
     h1, h2, h3, h4, h5, h6 {
       font: $font-header;
       margin-top: 1em;
-      @include floaty-title($color-text, lighten($color-text, 50%));
+      @include floaty-title($color-text, darken($color-page-background, 5%));
     }
 
     h1 {
