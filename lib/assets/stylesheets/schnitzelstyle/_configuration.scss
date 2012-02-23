@@ -9,13 +9,15 @@ $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;
 
 // define some colors
-// $color-0: white !default;   // page background
-// $color-1: #666 !default;    // page foreground
-// $color-2: #4ea4ec !default; // extra color (eg. title)
+$color-0: white !default;   // page background
+$color-1: #666 !default;    // page foreground
+$color-2: #4ea4ec !default; // extra color (eg. title)
 
-$color-0: #333 !default;   // page background
-$color-1: #ccc !default;    // page foreground
-$color-2: #f93 !default;    // extra 1
+// Or try a different color scheme...:
+//
+// $color-0: #333 !default;
+// $color-1: #ccc !default;
+// $color-2: #f93 !default;
 
 // apply colors to basic page elements
 $color-page-background: $color-0 !default;
