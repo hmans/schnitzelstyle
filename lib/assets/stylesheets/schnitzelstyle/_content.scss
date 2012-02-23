@@ -2,10 +2,27 @@
   article, section {
     margin: 4em 0;
 
-    header {
+    // header
+    &>header {
       margin-bottom: 1em;
     }
 
+    // footer
+    &>footer {
+      @include small-type;
+      color: lighten($color-text, 30%);  // FIXME
+      a {
+        color: lighten($color-text, 30%);  // FIXME
+        text-decoration: none;
+        border-bottom: none;
+        &:hover {
+          color: lighten($color-text, 30%);  // FIXME
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // basic styles
     p, dl, ol, ul, li, div.input {
       margin: 0.8em 0;
       line-height: 24px;
@@ -15,7 +32,6 @@
       @include justified;
     }
 
-    // basic styles
     em {
       font-style: italic;
       color: #666;
