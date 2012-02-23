@@ -22,7 +22,7 @@
     font: $font-default;
   }
 
-  /* set body class to 'loading' to switch the curser to a 'loading' cursor. */
+  // set body class to 'loading' to switch the curser to a 'loading' cursor.
   html.loading, html.loading * {
     cursor: wait !important;
   }
@@ -35,8 +35,11 @@
     font-weight: bold;
   }
 
+  // make sure each first and last child element has no leading margin.
+  *:first-child { margin-top: 0 !important }
+  *:last-child { margin-bottom: 0 !important }
+
   .container>header {
-    margin: 2em 0;
 
     color: $color-header;
     font: $font-header;
@@ -50,16 +53,9 @@
       font-size: 200%;
       font-weight: bold;
       @include floaty-title($color-page-background, $color-header);
-
-      @media only screen and (max-width: 640px) {
-        font-size: 100%;
-      }
-    }
-
-    @media only screen and (max-width: 640px) {
-      font-size: 100%;
     }
   }
+
   .container>footer {
     font: $font-footer;
     font-size: 75%;
@@ -68,9 +64,6 @@
     text-align: right;
     a { color: $color-footer; }
   }
-
-  *:first-child { margin-top: 0 !important }
-  *:last-child { margin-bottom: 0 !important }
 }
 
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */

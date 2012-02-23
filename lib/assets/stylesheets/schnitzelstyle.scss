@@ -7,6 +7,7 @@
 @import 'schnitzelstyle/forms';
 @import 'schnitzelstyle/grid';
 @import 'schnitzelstyle/export';
+@import 'schnitzelstyle/responsive';
 
 @mixin schnitzel-complete {
   @include schnitzel-reset;

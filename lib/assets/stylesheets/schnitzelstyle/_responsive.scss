@@ -1,0 +1,35 @@
+@mixin schnitzel-responsive {
+  @media only screen and (max-width: 640px) {
+    // for debugging
+    // body { background-color: #fee }
+
+    // container overrides
+    .container {
+      width: auto;
+      padding: 0 10px;
+
+      header {
+        font-size: 100%;
+
+        .site-title {
+          font-size: 100%;
+
+          display: block;
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+      }
+    }
+
+    // content overrides
+    article, section {
+      margin-top: 10px;
+
+      h1, h2, h3, h4, h5, h6 {
+        display: block;
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
