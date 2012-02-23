@@ -14,6 +14,12 @@
   }
 }
 
+@mixin animated($time: 200ms, $method: ease-in-out, $properties: all) {
+  -webkit-transition-duration: $time;
+  -webkit-transition-timing-function: $method;
+  -webkit-transition-property: $properties;
+}
+
 @mixin box-shadow($x: 0, $y: 1px, $r: 2px, $color: rgba(0,0,0,.2)) {
   -webkit-box-shadow: $x $y $r $color;
   -moz-box-shadow: $x $y $r $color;
