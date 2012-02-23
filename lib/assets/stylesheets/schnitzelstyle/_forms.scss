@@ -20,7 +20,7 @@
         border: none;
         font: $font-monospaced;
         background-color: rgba($color-text, 0.15);
-        color: rgba($color-text, 0.4);
+        color: rgba($color-text, 0.6);
 
         @include animated(100ms);
         &:hover, &:focus { color: $color-text }
@@ -67,7 +67,7 @@
 
   ::-webkit-input-placeholder {
     @include small-type;
-    color: rgba($color-text, 0.3);
+    color: rgba($color-text, 0.4);
     padding-top: 2px;
   }
 }
