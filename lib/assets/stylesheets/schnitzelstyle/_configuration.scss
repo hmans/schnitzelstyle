@@ -1,4 +1,4 @@
-$container-width: 600px;
+$container-width: 740px;
 
 $font-1: 16px "Georgia",serif !default;
 $font-2: 14px "Tahoma","Lucida Grande",sans-serif !default;
@@ -23,7 +23,7 @@ $color-extra:      #4ea4ec !default;
 $color-footer:          rgba($color-text, 0.5) !default;
 $color-title:           $color-extra !default;
 
-$color-heading-background: rgba($color-text, 0.18);
+$color-heading-background: mix($color-text, $color-background, 20%); //rgba($color-text, 0.18) !default;
 $color-heading-text:       $color-text !default;
 
 $color-link:            $color-text !default;
@@ -31,3 +31,5 @@ $color-link-underline:  complement($color-extra) !default;
 $color-link-hover:      complement($color-extra) !default;
 
 $color-error: #d33 !default;
+
+$color-body-background: darken($color-background, 10%) !default;

@@ -4,7 +4,7 @@
 
   color: $fg;
   background-color: $bg;
-  border-left: 5px solid darken($bg, 10%);
+  border-left: 5px solid rgba($fg, 0.2);
 
   a {
     color: $fg;

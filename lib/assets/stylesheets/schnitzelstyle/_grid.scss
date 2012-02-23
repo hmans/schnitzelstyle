@@ -1,6 +1,10 @@
 @mixin container {
-  width: 600px;
+  width: $container-width;
   margin: 0 auto;
+  background-color: $color-background;
+  border-left: 1px solid darken($color-body-background, 10%);
+  border-right: 1px solid darken($color-body-background, 10%);
+  padding: 20px 40px;
 }
 
 @mixin row {
