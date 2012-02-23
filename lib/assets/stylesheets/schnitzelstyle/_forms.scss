@@ -6,17 +6,24 @@
       margin: 0.5em 0;
 
       label {
-        display: block;
-        color: $color-header;
-        font: $font-footer;
-        font-size: 80%;
+        display: inline-block;
+        @include small-type;
         font-weight: bold;
+        padding-left: 5px;
+        color: $color-header;
       }
 
-      input {
-        font: $font-default;
-        padding: 2px 4px;
-        width: 600px;
+      input, textarea {
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        border: none;
+        font: $font-monospaced;
+        background-color: #f4f4f4; // FIXME
+        color: #999;  // FIXME
+
+        @include animated(100ms);
+        &:hover, &:focus { color: #333; }  // FIXME
       }
 
       select, option {
@@ -24,10 +31,8 @@
         padding: 2px 4px;
       }
 
-      textarea {
-        font: $font-default;
-        padding: 2px 4px;
-        width: 600px;
+      select {
+        display: block;
       }
 
       .error {
@@ -38,10 +43,10 @@
       }
 
       .hint {
+        padding: 0px 5px;
         display: block;
         color: $color-2;
-        font: $font-footer;
-        font-size: 80%;
+        @include small-type;
       }
     }
 
@@ -50,6 +55,8 @@
     }
 
     div.buttons {
+      margin-top: 2em !important;
+
       input {
         @include button;
         font-size: 100%;
