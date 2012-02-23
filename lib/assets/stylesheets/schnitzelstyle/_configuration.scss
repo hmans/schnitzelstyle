@@ -9,27 +9,25 @@ $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;
 
 // define some colors
-$color-0: white !default;   // page background
-$color-1: #666 !default;    // page foreground
-$color-2: #4ea4ec !default; // extra color (eg. title)
+$color-background: white !default;
+$color-text:       #666 !default;
+$color-extra:      #4ea4ec !default;
 
 // Or try a different color scheme...:
 //
-// $color-0: #333 !default;
-// $color-1: #ccc !default;
-// $color-2: #f93 !default;
+// $color-background: #333 !default;
+// $color-text:       #ccc !default;
+// $color-extra:      #f93 !default;
 
 // apply colors to basic page elements
-$color-background:      $color-0 !default;
-$color-text:            $color-1 !default;
 $color-footer:          rgba($color-text, 0.5) !default;
-$color-title:           $color-2 !default;
+$color-title:           $color-extra !default;
 
 $color-heading-background: rgba($color-text, 0.18);
 $color-heading-text:       $color-text !default;
 
 $color-link:            $color-text !default;
-$color-link-underline:  complement($color-2) !default;
-$color-link-hover:      complement($color-2) !default;
+$color-link-underline:  complement($color-extra) !default;
+$color-link-hover:      complement($color-extra) !default;
 
 $color-error: #d33 !default;
