@@ -36,5 +36,11 @@
         margin-right: -10px;
       }
     }
+
+    // grid overrides
+    .column, .columns {
+      width: 100% !important;
+      float: none !important;
+    }
   }
 }
