@@ -4,12 +4,6 @@
 
     header {
       margin-bottom: 1em;
-
-      h2 {
-        @include floaty-title($color-page-background, $color-text);
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-      }
     }
 
     p, dl, ol, ul, li, div.input {
@@ -17,6 +11,17 @@
       line-height: 24px;
     }
 
+    p, li {
+      @include justified;
+    }
+
+    // basic styles
+    em {
+      font-style: italic;
+      color: #666;
+    }
+
+    // links
     a {
       color: $color-link;
       text-decoration: none;
@@ -27,23 +32,25 @@
       }
     }
 
+    // lists
     ul {
       list-style-type: square;
     }
 
     ol {
-      list-style-type: lower-roman;
+      list-style-type: decimal;
     }
 
-    em {
-      font-style: italic;
-      color: #666;
+    li {
+      margin-left: 1em;
     }
 
+    // headings
     h1, h2, h3, h4, h5, h6 {
-      font: $font-header;
-      margin-top: 1em;
       @include floaty-title($color-text, darken($color-page-background, 5%));
+      font: $font-header;
+      margin-top: 1.5em;
+      font-weight: bold;
     }
 
     h1 {
@@ -51,33 +58,41 @@
       text-transform: uppercase;
     }
 
-    img {
-      max-width: 100%;
+    // quotes
+    blockquote {
+      @include justified;
+      color: #777; // FIXME
+      padding: 0 20px;
+      font-style: italic;
+      border-left: 5px solid #eee;
     }
 
+    // images
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    // code
     pre, code {
       font: $font-monospaced;
       background-color: #eee;
       color: #666;
     }
 
-    code { padding: 0.1em 0.5em; }
+    code {
+      padding: 3px
+    }
 
     pre {
       display: block;
-      padding: 0.5em;
+      padding: 5px;
       overflow: scroll;
-
-      code { padding: 0; }
     }
 
-    blockquote {
-      color: #777;
-      padding-left: 1em;
-      font-style: italic;
-      border-left: 5px solid #eee;
-    }
-
+    // media embeds
+    //
     // Prepare embedded media for proper responsiveness.
     // Source: http://webdesignerwall.com/tutorials/css-elastic-videos
     .embedded {
@@ -96,7 +111,7 @@
       }
     }
 
-    // tweet integration
+    // embedded tweets
     .twp-container {
       margin: 1.5em auto;
     }

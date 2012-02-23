@@ -1,8 +1,10 @@
 @mixin floaty-title($fg, $bg) {
-  background-color: $bg;
-  color: $fg;
   display: inline-block;
   padding: 5px 10px;
+
+  color: $fg;
+  background-color: $bg;
+  border-left: 5px solid darken($bg, 10%);
 
   a {
     color: $fg;
