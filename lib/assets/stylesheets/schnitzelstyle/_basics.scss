@@ -43,7 +43,7 @@
   .container>header {
     margin-top: 20px !important;
 
-    color: $color-header;
+    color: $color-title;
     font: $font-header;
     font-size: 120%;
     line-height: 150%;
@@ -54,7 +54,7 @@
       font: $font-header;
       font-size: 200%;
       font-weight: bold;
-      @include floaty-title($color-page-background, $color-header);
+      @include floaty-title($color-page-background, $color-title);
     }
   }
 

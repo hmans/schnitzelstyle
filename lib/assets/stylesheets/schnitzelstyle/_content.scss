@@ -10,13 +10,12 @@
     // footer
     &>footer {
       @include small-type;
-      color: lighten($color-text, 30%);  // FIXME
+
+      &, & a, & a:hover { color: mix($color-text, $color-page-background) }
       a {
-        color: lighten($color-text, 30%);  // FIXME
         text-decoration: none;
         border-bottom: none;
         &:hover {
-          color: lighten($color-text, 30%);  // FIXME
           text-decoration: underline;
         }
       }
@@ -34,7 +33,6 @@
 
     em {
       font-style: italic;
-      color: #666;
     }
 
     // links
@@ -63,7 +61,7 @@
 
     // headings
     h1, h2, h3, h4, h5, h6 {
-      @include floaty-title($color-text, darken($color-page-background, 5%));
+      @include floaty-title($color-heading-text, $color-heading-background);
       font: $font-header;
       margin-top: 1.5em;
       font-weight: bold;
@@ -73,14 +71,13 @@
       font-size: 150%;
       text-transform: uppercase;
     }
-
     // quotes
     blockquote {
       @include justified;
-      color: #777; // FIXME
+      color: rgba($color-text, 0.8);
       padding: 0 20px;
       font-style: italic;
-      border-left: 5px solid #eee;
+      border-left: 5px solid rgba($color-text, 0.2);
     }
 
     // images
@@ -93,8 +90,8 @@
     // code
     pre, code {
       font: $font-monospaced;
-      background-color: #eee;
-      color: #666;
+      background-color: mix($color-text, $color-page-background, 20%);
+      color: mix($color-text, $color-page-background, 80%);
     }
 
     code {

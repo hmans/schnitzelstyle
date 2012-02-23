@@ -10,7 +10,7 @@
         @include small-type;
         font-weight: bold;
         padding-left: 5px;
-        color: $color-header;
+        color: $color-title;
       }
 
       input, textarea {
@@ -19,11 +19,11 @@
         padding: 5px;
         border: none;
         font: $font-monospaced;
-        background-color: #f4f4f4; // FIXME
-        color: #999;  // FIXME
+        background-color: mix($color-text, $color-page-background, 15%);
+        color: mix($color-text, $color-page-background, 65%);
 
         @include animated(100ms);
-        &:hover, &:focus { color: #333; }  // FIXME
+        &:hover, &:focus { color: $color-text }
       }
 
       select, option {
@@ -66,9 +66,8 @@
   }
 
   ::-webkit-input-placeholder {
-    color: #ccc;
-    font: $font-footer;
-    font-size: 80%;
+    @include small-type;
+    color: mid-color($color-text, $color-page-background, 55%);
     padding-top: 2px;
   }
 }
