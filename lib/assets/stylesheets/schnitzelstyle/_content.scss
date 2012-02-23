@@ -11,7 +11,7 @@
     &>footer {
       @include small-type;
 
-      &, & a, & a:hover { color: mix($color-text, $color-page-background) }
+      &, & a, & a:hover { color: $color-footer };
       a {
         text-decoration: none;
         border-bottom: none;
@@ -90,8 +90,8 @@
     // code
     pre, code {
       font: $font-monospaced;
-      background-color: mix($color-text, $color-page-background, 20%);
-      color: mix($color-text, $color-page-background, 80%);
+      background-color: rgba($color-text, 0.2);
+      color: rgba($color-text, 0.9);
     }
 
     code {

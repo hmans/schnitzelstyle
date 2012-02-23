@@ -9,18 +9,18 @@ $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;
 
 // define some colors
-$color-0: white !default;   // page background
-$color-1: #666 !default;    // page foreground
-$color-2: #4ea4ec !default; // extra color (eg. title)
+// $color-0: white !default;   // page background
+// $color-1: #666 !default;    // page foreground
+// $color-2: #4ea4ec !default; // extra color (eg. title)
 
-// $color-0: #333 !default;   // page background
-// $color-1: #ccc !default;    // page foreground
-// $color-2: #f93 !default;    // extra 1
+$color-0: #333 !default;   // page background
+$color-1: #ccc !default;    // page foreground
+$color-2: #f93 !default;    // extra 1
 
 // apply colors to basic page elements
 $color-page-background: $color-0 !default;
 $color-text:            $color-1 !default;
-$color-footer:          mix($color-text, $color-page-background) !default;
+$color-footer:          rgba($color-text, 0.5) !default;
 $color-title:           $color-2 !default;
 
 $color-heading-background: rgba($color-text, 0.18);
