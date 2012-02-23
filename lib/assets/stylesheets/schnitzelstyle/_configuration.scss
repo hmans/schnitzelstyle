@@ -23,7 +23,7 @@ $color-text:            $color-1 !default;
 $color-footer:          mix($color-text, $color-page-background) !default;
 $color-title:           $color-2 !default;
 
-$color-heading-background: rgba($color-text, 0.2); //mix($color-text, $color-page-background, 40%) !default;
+$color-heading-background: rgba($color-text, 0.18);
 $color-heading-text:       $color-text !default;
 
 $color-link:            $color-text !default;
