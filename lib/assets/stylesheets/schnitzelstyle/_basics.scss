@@ -17,7 +17,7 @@
   * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
   body {
-    background-color: $color-page-background;
+    background-color: $color-background;
     color: $color-text;
     font: $font-default;
     padding-bottom: 20px;
@@ -54,7 +54,7 @@
       font: $font-header;
       font-size: 200%;
       font-weight: bold;
-      @include floaty-title($color-page-background, $color-title);
+      @include floaty-title($color-background, $color-title);
     }
   }
 

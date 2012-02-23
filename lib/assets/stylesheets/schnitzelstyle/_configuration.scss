@@ -20,7 +20,7 @@ $color-2: #4ea4ec !default; // extra color (eg. title)
 // $color-2: #f93 !default;
 
 // apply colors to basic page elements
-$color-page-background: $color-0 !default;
+$color-background:      $color-0 !default;
 $color-text:            $color-1 !default;
 $color-footer:          rgba($color-text, 0.5) !default;
 $color-title:           $color-2 !default;
