@@ -1,13 +1,16 @@
 $container-width: 600px;
 
-$font-default:    15px "Georgia" !default;
-$font-header:     14px "Lucida Grande" !default;
+$font-1: 16px "Georgia" !default;
+$font-2: 14px "Lucida Grande" !default;
+
+$font-default:    $font-1;
+$font-header:     $font-2;
 $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;
 
 // define some colors
 $color-0: white !default;
-$color-1: #555 !default;
+$color-1: #666 !default;
 $color-2: #999 !default;
 $color-3: #4ea4ec !default;
 $color-4: complement($color-3);
