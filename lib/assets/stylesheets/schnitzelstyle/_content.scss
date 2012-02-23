@@ -1,0 +1,92 @@
+@mixin schnitzel-content {
+  article, section {
+    margin: 4em 0;
+
+    header {
+      margin-bottom: 1em;
+
+      h2 {
+        @include floaty-title($color-page-background, $color-text);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+      }
+    }
+
+    p, dl, ol, ul, li, div.input {
+      margin: 0.8em 0;
+      line-height: 24px;
+    }
+
+    // tweet integration
+    .twp-container {
+      margin: 1.5em auto;
+    }
+
+    a {
+      color: $color-link;
+      text-decoration: none;
+      border-bottom: 2px solid $color-link-underline;
+
+      &:hover {
+        color: $color-link-hover;
+      }
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    ol {
+      list-style-type: lower-roman;
+    }
+
+    em {
+      font-style: italic;
+      color: #666;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font: $font-header;
+      margin-top: 1em;
+      @include floaty-title($color-text, darken($color-page-background, 5%));
+    }
+
+    h1 {
+      font-size: 150%;
+      text-transform: uppercase;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    pre, code {
+      font: $font-monospaced;
+      background-color: #eee;
+      color: #666;
+    }
+
+    code { padding: 0.1em 0.5em; }
+
+    pre {
+      display: block;
+      padding: 0.5em;
+      overflow: scroll;
+
+      code { padding: 0; }
+    }
+
+    blockquote {
+      color: #777;
+      padding-left: 1em;
+      font-style: italic;
+      border-left: 5px solid #eee;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .container>article, .container>section {
+      margin: 0;
+    }
+  }
+}

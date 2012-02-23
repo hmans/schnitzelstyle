@@ -1,6 +1,7 @@
 @import 'schnitzelstyle/configuration';
 @import 'schnitzelstyle/reset';
 @import 'schnitzelstyle/basics';
+@import 'schnitzelstyle/content';
 @import 'schnitzelstyle/eyecandy';
 @import 'schnitzelstyle/flashes';
 @import 'schnitzelstyle/forms';
@@ -10,6 +11,7 @@
 @mixin schnitzel-complete {
   @include schnitzel-reset;
   @include schnitzel-basics;
+  @include schnitzel-content;
   @include schnitzel-flashes;
   @include schnitzel-forms;
   @include schnitzel-eyecandy;
