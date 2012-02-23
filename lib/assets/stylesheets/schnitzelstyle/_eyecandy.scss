@@ -26,7 +26,7 @@
   box-shadow: $x $y $r $color;
 }
 
-@mixin button($color: $color-2, $radius: 4px) {
+@mixin button($color: complement($color-2), $radius: 4px) {
   $text-color: lighten($color, 50%);
 
   padding: 2px 8px;
