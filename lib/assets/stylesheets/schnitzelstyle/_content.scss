@@ -49,15 +49,15 @@
     // lists
     ul {
       list-style-type: square;
+      li { margin-left: 1.5em; }
     }
 
     ol {
       list-style-type: decimal;
+      li { margin-left: 1.5em; }
     }
 
-    li {
-      margin-left: 1em;
-    }
+
 
     // headings
     h1, h2, h3, h4, h5, h6 {
