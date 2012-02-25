@@ -20,10 +20,10 @@
   -webkit-transition-property: $properties;
 }
 
-@mixin box-shadow($x: 0, $y: 1px, $r: 2px, $color: rgba(0,0,0,.2)) {
-  -webkit-box-shadow: $x $y $r $color;
-  -moz-box-shadow: $x $y $r $color;
-  box-shadow: $x $y $r $color;
+@mixin box-shadow($x: 0, $y: 1px, $r: 2px, $color: rgba(0,0,0,.2), $inset: false) {
+  $s: $x $y $r $color;
+  @if ($inset) { $s: $s inset; }
+  @include vendorize(box-shadow, $s);
 }
 
 @mixin button($color: complement($color-extra), $radius: 4px) {
