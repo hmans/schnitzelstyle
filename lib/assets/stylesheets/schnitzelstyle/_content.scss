@@ -61,10 +61,11 @@
 
     // headings
     h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.5em;
       @include floaty-title($color-heading-text, $color-heading-background);
       font: $font-header;
-      margin-top: 1.5em;
       font-weight: bold;
+      text-shadow: $color-background 1px 1px 1px;
     }
 
     h1 {
