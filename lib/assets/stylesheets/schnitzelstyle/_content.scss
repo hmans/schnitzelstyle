@@ -62,15 +62,19 @@
     // headings
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.5em;
-      @include floaty-title($color-heading-text, $color-heading-background);
       font: $font-header;
       font-weight: bold;
+    }
+
+    h1, h2 {
+      @include floaty-title($color-heading-text, $color-heading-background);
     }
 
     h1 {
       font-size: 150%;
       text-transform: uppercase;
     }
+
     // quotes
     blockquote {
       @include justified;
