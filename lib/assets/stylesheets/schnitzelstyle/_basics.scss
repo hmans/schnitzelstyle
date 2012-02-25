@@ -42,6 +42,13 @@
     font-weight: bold;
   }
 
+  hr {
+    border: none;
+    color: rgba($color-text, 0.1);
+    background-color: rgba($color-text, 0.1);
+    height: 1px;
+  }
+
   // make sure each first and last child element has no leading margin.
   *:first-child { margin-top: 0 !important }
   *:last-child { margin-bottom: 0 !important }
