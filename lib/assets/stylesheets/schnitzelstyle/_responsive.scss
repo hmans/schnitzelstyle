@@ -7,10 +7,10 @@
     // container overrides
     .container {
       width: auto;
-      padding: 0 10px;
 
       &>header {
         margin-top: 0 !important;
+        padding: 0 10px;
         font-size: 100%;
 
         .site-title {
@@ -20,6 +20,11 @@
           margin-left: -10px;
           margin-right: -10px;
         }
+      }
+
+      &>section, &>article {
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
 
