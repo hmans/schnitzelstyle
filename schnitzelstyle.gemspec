@@ -5,8 +5,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Hendrik Mans"]
   gem.email         = ["hendrik@mans.de"]
   gem.description   = %q{A simple, light-weight CSS framework to kickstart your web app.}
-  gem.summary       = %q{Team Schnitzel's CSS Framework}
-  gem.homepage      = "http://www.teamschnitzel.com/"
+  gem.summary       = %q{SCSS-powered CSS Framework extracted from SchnitzelPress.}
+  gem.homepage      = "http://schnitzelpress.org/schnitzelstyle/"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
