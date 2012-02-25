@@ -20,10 +20,13 @@
         border: none;
         font: $font-monospaced;
         background-color: rgba($color-text, 0.15);
-        color: rgba($color-text, 0.6);
+        color: $color-text;
+        @include box-shadow(4px, 4px, 8px, rgba($color-text, 0.05), $inset: true);
+        border-radius: 3px;
+      }
 
-        @include animated(100ms);
-        &:hover, &:focus { color: $color-text }
+      textarea {
+        line-height: 1.5;
       }
 
       select, option {
