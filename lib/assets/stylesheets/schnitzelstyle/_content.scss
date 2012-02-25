@@ -65,7 +65,6 @@
       @include floaty-title($color-heading-text, $color-heading-background);
       font: $font-header;
       font-weight: bold;
-      text-shadow: $color-background 1px 1px 1px;
     }
 
     h1 {
