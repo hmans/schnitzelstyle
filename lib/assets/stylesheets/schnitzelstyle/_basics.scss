@@ -81,12 +81,9 @@
   }
 
   // formatting of sections
-  section {
+  section+section, article+section {
     border-top: 5px solid rgba($color-text, 0.1);
     padding: 1em 0;
-  }
-  header+section {
-    border-top: none;
   }
 }
 
