@@ -13,12 +13,6 @@ $color-background: white !default;
 $color-text:       #555 !default;
 $color-extra:      #4ea4ec !default;
 
-// Or try a different color scheme...:
-//
-// $color-background: #333 !default;
-// $color-text:       #ccc !default;
-// $color-extra:      #f93 !default;
-
 // apply colors to basic page elements
 $color-footer:          rgba($color-text, 0.5) !default;
 $color-title:           $color-extra !default;
