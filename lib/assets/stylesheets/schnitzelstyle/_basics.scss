@@ -1,3 +1,9 @@
+@mixin vendorize($name, $value) {
+  #{$name}: $value;
+  -webkit-#{$name}: $value;
+  -moz-#{$name}: $value;
+}
+
 @mixin justified {
   text-align: justify;
   text-justify: newspaper;
