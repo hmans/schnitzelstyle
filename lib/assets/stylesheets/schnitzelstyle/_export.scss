@@ -13,4 +13,7 @@
   .ten.columns     { @include columns(10); }
   .eleven.columns  { @include columns(11); }
   .twelve.columns  { @include columns(12); }
+
+  .large-type      { @include large-type; }
+  .small-type      { @include small-type; }
 }
