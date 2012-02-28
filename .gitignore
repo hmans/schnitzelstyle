@@ -17,3 +17,4 @@ tmp
 .sass-cache/
 schnitzelstyle.sublime-project
 schnitzelstyle.sublime-workspace
+.DS_Store
