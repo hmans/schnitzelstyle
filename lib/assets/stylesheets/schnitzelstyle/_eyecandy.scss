@@ -1,3 +1,8 @@
+@mixin appear-on-hover($op-non-hover: 0.3, $op-hover: 1) {
+  opacity: $op-non-hover;
+  &:hover { opacity: $op-hover }
+}
+
 @mixin floaty-title($fg, $bg) {
   display: inline-block;
   padding: 5px 40px 5px 10px;
