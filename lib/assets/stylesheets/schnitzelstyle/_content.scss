@@ -114,12 +114,19 @@
 
     // media embeds
     .embedded {
-      $width: $container-width + 300px;
       position: relative;
+      $width: $container-width + 300px;
       width: $width;
-      height: ($width / 16) * 9.5;
       margin-left: -($width - $container-width) / 2;
       overflow: hidden;
+
+      &.rich {
+        height: 165px;
+      }
+
+      &.video {
+        height: ($width / 16) * 9.5;
+      }
 
       iframe, object, embed {
         position: absolute;
