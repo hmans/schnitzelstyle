@@ -57,13 +57,15 @@
       li { margin-left: 1.5em; }
     }
 
-
-
     // headings
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.5em;
       font: $font-header;
       font-weight: bold;
+    }
+
+    hr+h1, hr+h2, hr+h3, hr+h4, hr+h5, hr+h6 {
+      margin-top: 0;
     }
 
     h1, h2 {
