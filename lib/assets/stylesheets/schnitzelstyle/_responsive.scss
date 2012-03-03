@@ -1,4 +1,16 @@
 @mixin schnitzel-responsive {
+  @media only screen and (max-width: 940px) {
+    article, section {
+      .embedded {
+        width: 100%;
+        height: 0;
+        padding-top: 30px;
+        padding-bottom: 56.25%;
+        margin-left: 0;
+      }
+    }
+  }
+
   @media only screen and (max-width: 640px) {
     body {
       padding-bottom: 10px;

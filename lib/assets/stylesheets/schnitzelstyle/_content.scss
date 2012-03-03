@@ -113,14 +113,12 @@
     }
 
     // media embeds
-    //
-    // Prepare embedded media for proper responsiveness.
-    // Source: http://webdesignerwall.com/tutorials/css-elastic-videos
     .embedded {
+      $width: $container-width + 300px;
       position: relative;
-      padding-bottom: 56.25%;
-      padding-top: 30px;
-      height: 0;
+      width: $width;
+      height: ($width / 16) * 9.5;
+      margin-left: -($width - $container-width) / 2;
       overflow: hidden;
 
       iframe, object, embed {
