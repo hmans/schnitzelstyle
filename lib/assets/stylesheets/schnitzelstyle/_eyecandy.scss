@@ -63,4 +63,5 @@
   .button { @include button }
   .button.red { @include button(#c66) }
   .button.green { @include button(#6c6) }
+  .button.blue  { @include button(#66c) }
 }
