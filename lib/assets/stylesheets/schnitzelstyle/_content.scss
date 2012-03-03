@@ -120,12 +120,17 @@
       margin-left: -($width - $container-width) / 2;
       overflow: hidden;
 
-      &.rich {
-        height: 165px;
+      &.soundcloud {
+        height: 165px !important;
       }
 
       &.video {
-        height: ($width / 16) * 9.5;
+        &.vimeo {
+          height: ($width / 16) * 9;
+        }
+        &.youtube {
+          height: ($width / 16) * 9.5;
+        }
       }
 
       iframe, object, embed {

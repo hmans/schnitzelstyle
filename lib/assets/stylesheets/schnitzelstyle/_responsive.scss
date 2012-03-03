@@ -5,14 +5,15 @@
         width: 100%;
         margin-left: 0;
 
-        &.rich {
-          height: 165px !important;
-        }
-
         &.video {
           height: 0 !important;
           padding-top: 30px;
-          padding-bottom: 56.25%;
+          &.youtube {
+            padding-bottom: 56.25%;
+          }
+          &.vimeo {
+            padding-bottom: 52%;
+          }
         }
       }
     }
