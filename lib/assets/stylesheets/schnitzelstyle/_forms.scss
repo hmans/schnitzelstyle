@@ -72,8 +72,10 @@
       input { @include button; }
 
       input, button {
+        display: inline-block;
         font-size: 100%;
-        padding: 4px 10px;
+        padding: 4px 10px !important;
+        cursor: pointer;
       }
     }
   }
