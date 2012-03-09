@@ -66,7 +66,7 @@
 
 @mixin schnitzel-eyecandy {
   .button { @include button }
-  .button.red { @include button(#c66) }
-  .button.green { @include button(#6c6) }
-  .button.blue  { @include button(#66c) }
+  .button.red, button.red     { @include button(#c66) }
+  .button.green, button.green { @include button(#6c6) }
+  .button.blue, button.blue   { @include button(#66c) }
 }
