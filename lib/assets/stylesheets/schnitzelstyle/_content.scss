@@ -69,7 +69,7 @@
     }
 
     h1, h2 {
-      @include floaty-title($color-heading-text, $color-heading-background);
+      // @include floaty-title($color-heading-text, $color-heading-background);
     }
 
     h1 {

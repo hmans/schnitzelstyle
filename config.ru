@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'bundler/setup'
-
-require 'schnitzelstyle'
-require 'serve'
-require 'rack/cache'
+Bundler.require
 
 # sigh: https://github.com/tanoku/redcarpet/pull/89
 require 'redcarpet'
@@ -16,4 +13,9 @@ class RedcarpetCompat
 end
 
 use Rack::Cache
-run Serve::RackAdapter.new('site')
+
+get '/' do
+  'sup'
+end
+
+run Sinatra::Application

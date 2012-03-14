@@ -18,3 +18,4 @@ tmp
 schnitzelstyle.sublime-project
 schnitzelstyle.sublime-workspace
 .DS_Store
+.powenv

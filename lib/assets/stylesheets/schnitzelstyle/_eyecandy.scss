@@ -70,3 +70,17 @@
   .button.green, button.green { @include button(#6c6) }
   .button.blue, button.blue   { @include button(#66c) }
 }
+
+
+@mixin eyecatcher {
+  background-color: rgba($color-text, 0.1);
+  padding: 1em;
+  font-size: 140%;
+  p {
+    line-height: 150%;
+  }
+  h2 {
+    font-size: 180%;
+  }
+}
+
