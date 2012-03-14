@@ -14,8 +14,12 @@ end
 
 use Rack::Cache
 
+get '/schnitzelstyle-:version.css' do
+  scss :site
+end
+
 get '/' do
-  'sup'
+  haml :index
 end
 
 run Sinatra::Application
