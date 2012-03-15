@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Schnitzelstyle::VERSION
 
-  gem.add_dependency 'sass'
+  gem.add_dependency 'sass', '~> 3.2.0.alpha.94'
 end
