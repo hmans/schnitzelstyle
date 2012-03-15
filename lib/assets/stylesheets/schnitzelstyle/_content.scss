@@ -99,19 +99,23 @@
     // code
     pre, code {
       font: $font-monospaced;
+    }
+
+    p>code {
+      padding: 2px 5px;
       background-color: rgba($color-text, 0.08);
       color: rgba($color-text, 0.9);
       @include border-radius(3px);
     }
 
-    code {
-      padding: 2px 5px
-    }
-
     pre {
       display: block;
-      padding: 5px;
+      padding: 10px;
       overflow: scroll;
+    }
+
+    pre>code {
+      display: block;
     }
 
     // media embeds
