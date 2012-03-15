@@ -2,6 +2,11 @@
 @import 'schnitzelstyle/coderay';
 @import 'schnitzelstyle/export';
 
-@include schnitzel-complete;
+@include schnitzel-reset;
+@include schnitzel-basics;
+@include schnitzel-content;
+@include schnitzel-flashes;
+@include schnitzel-forms;
+@include schnitzel-eyecandy;
 @include schnitzel-export;
 @include schnitzel-responsive;

@@ -1,35 +1,10 @@
-@mixin vendorize($name, $value) {
-  #{$name}: $value;
-  -webkit-#{$name}: $value;
-  -moz-#{$name}: $value;
-}
-
-@mixin box-model($model) {
-  @include vendorize(box-sizing, $model !important);
-  * { @include vendorize(box-sizing, $model !important); }
-}
-
-@mixin justified {
-  text-align: justify;
-  text-justify: newspaper;
-}
-
-@mixin small-type {
-  font: $font-footer;
-  font-size: 80%;
-}
-
-@mixin large-type {
-  font-size: 130%;
-}
-
 @mixin schnitzel-basics {
   body {
     @include box-model(border-box);
     color: $color-text;
     background-color: $color-background;
     font: $font-default;
-    padding-bottom: 50px;
+    padding: 50px 0 20px 0;
   }
 
   // set body class to 'loading' to switch the curser to a 'loading' cursor.

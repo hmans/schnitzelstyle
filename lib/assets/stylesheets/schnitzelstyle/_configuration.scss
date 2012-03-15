@@ -1,10 +1,7 @@
 $container-width: 600px !default;
 
-$font-1: 15px "Helvetica Neue","Arial",helvetica,sans-serif !default;
-$font-2: 15px "Verdana",helvetica,sans-serif !default;
-
-$font-default:    $font-1;
-$font-header:     $font-2;
+$font-default:    15px "Helvetica Neue","Arial",helvetica,sans-serif !default;
+$font-header:     $font-default !default;
 $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;
 

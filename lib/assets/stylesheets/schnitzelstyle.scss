@@ -1,4 +1,5 @@
 @import 'schnitzelstyle/configuration';
+@import 'schnitzelstyle/mixins';
 @import 'schnitzelstyle/reset';
 @import 'schnitzelstyle/basics';
 @import 'schnitzelstyle/content';
@@ -8,12 +9,3 @@
 @import 'schnitzelstyle/grid';
 @import 'schnitzelstyle/export';
 @import 'schnitzelstyle/responsive';
-
-@mixin schnitzel-complete {
-  @include schnitzel-reset;
-  @include schnitzel-basics;
-  @include schnitzel-content;
-  @include schnitzel-flashes;
-  @include schnitzel-forms;
-  @include schnitzel-eyecandy;
-}
