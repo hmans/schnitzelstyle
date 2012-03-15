@@ -1,10 +1,8 @@
 @mixin schnitzel-content {
-  article, section {
-    margin: 2em 0;
-
+  article, section, body>header {
     // header
     &>header {
-      margin-bottom: 1em;
+      // margin-bottom: 1em;
     }
 
     // footer
@@ -23,16 +21,12 @@
 
     // basic styles
     p, dl, ol, ul, li, div.input {
-      margin: 0.8em 0;
+      margin: 1em 0;
       line-height: 24px;
     }
 
     p, li {
       @include justified;
-    }
-
-    em {
-      font-style: italic;
     }
 
     // links
@@ -59,23 +53,31 @@
 
     // headings
     h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.5em;
+      margin-top: 1em;
       font: $font-header;
       font-weight: bold;
+
+      small {
+        color: rgba($color-text, 0.3);
+      }
+    }
+
+    h1, h2 {
+      small { font-size: $font-size * 1.2; }
     }
 
     hr+h1, hr+h2, hr+h3, hr+h4, hr+h5, hr+h6 {
       margin-top: 0;
     }
 
-    h1, h2 {
-      // @include floaty-title($color-heading-text, $color-heading-background);
-    }
-
     h1 {
-      font-size: 140%;
+      font-size: 250%;
       text-transform: uppercase;
       letter-spacing: -0.07em;
+    }
+
+    h2 {
+      font-size: 170%;
     }
 
     // quotes
@@ -99,7 +101,7 @@
       font: $font-monospaced;
       background-color: rgba($color-text, 0.08);
       color: rgba($color-text, 0.9);
-      border-radius: 3px;
+      @include border-radius(3px);
     }
 
     code {

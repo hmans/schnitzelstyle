@@ -1,68 +1,62 @@
+@mixin when-full {
+  @media only screen and (min-width: $container-width + 1px) {
+    @content;
+  }
+}
+
+@mixin when-fluid {
+  @media only screen and (max-width: $container-width) {
+    @content;
+  }
+}
+
+@mixin when-iphone {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin schnitzel-responsive {
-  @media only screen and (max-width: 940px) {
-    article, section {
-      .embedded {
-        width: 100%;
-        margin-left: 0;
+  // @media only screen and (max-width: 940px) {
+  //   article, section {
+  //     .embedded {
+  //       width: 100%;
+  //       margin-left: 0;
 
-        &.video {
-          height: 0 !important;
-          padding-top: 30px;
-          &.youtube {
-            padding-bottom: 56.25%;
-          }
-          &.vimeo {
-            padding-bottom: 52%;
-          }
-        }
-      }
-    }
-  }
+  //       &.video {
+  //         height: 0 !important;
+  //         padding-top: 30px;
+  //         &.youtube {
+  //           padding-bottom: 56.25%;
+  //         }
+  //         &.vimeo {
+  //           padding-bottom: 52%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  @media only screen and (max-width: 640px) {
-    body {
-      padding-bottom: 10px;
-    }
+  // @media only screen and (max-width: $container-width) {
+  //   body {
+  //     padding-bottom: 10px;
+  //   }
 
-    // container overrides
-    .container {
-      width: auto;
+  //   // container overrides
+  //   .container {
+  //     margin-top: 0;
+  //     width: auto !important;
+  //     & > :first-child { margin-top: 0 }
+  //   }
 
-      &>header {
-        margin-top: 0 !important;
-        padding: 0 10px;
-        font-size: 100%;
+  //   // content overrides
+  //   article, section {
+  //   }
 
-        .site-title {
-          font-size: 100%;
-
-          display: block;
-          margin-left: -10px;
-          margin-right: -10px;
-        }
-      }
-
-      &>section, &>article {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-
-    // content overrides
-    article, section {
-      margin-top: 10px;
-
-      h1, h2 {
-        display: block;
-        margin-left: -10px;
-        margin-right: -10px;
-      }
-    }
-
-    // grid overrides
-    .column, .columns {
-      width: 100% !important;
-      float: none !important;
-    }
-  }
+  //   // grid overrides
+  //   .column, .columns {
+  //     width: 100% !important;
+  //     float: none !important;
+  //   }
+  // }
 }

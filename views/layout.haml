@@ -1,14 +1,12 @@
 !!! 5
 %html
   %head
-    %title mans.de
+    %title Schnitzelstyle
     %meta{ :"http-equiv" => "content-type", :content => "text/html; charset=UTF-8" }
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
     %link{ :href => "/schnitzelstyle-#{Schnitzelstyle::VERSION}.css", :media => "screen, print", :rel => "stylesheet", :type => "text/css" }
   %body
-    .container
+    = yield
 
-      = yield
-
-      %footer.footer
-        Hendrik Mans &middot; Christian-Förster-Straße 16 &middot; 20253 Hamburg
+    %footer.footer
+      Hendrik Mans &middot; Christian-Förster-Straße 16 &middot; 20253 Hamburg

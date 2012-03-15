@@ -22,7 +22,7 @@
         background-color: rgba($color-text, 0.15);
         color: $color-text;
         @include box-shadow(4px, 4px, 8px, rgba($color-text, 0.05), $inset: true);
-        border-radius: 3px;
+        @include border-radius(3px);
       }
 
       textarea {

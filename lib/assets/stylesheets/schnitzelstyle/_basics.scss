@@ -1,10 +1,35 @@
 @mixin schnitzel-basics {
   body {
     @include box-model(border-box);
+    padding: 0;
     color: $color-text;
     background-color: $color-background;
-    font: $font-default;
-    padding: 50px 0 20px 0;
+    font-family: $font-default;
+    font-size: $font-size;
+
+    &>section, &>article, &>header, &>footer {
+      @include container;
+      margin-top: 10px;
+      padding: $section-padding;
+
+      &>*:first-child { margin-top: 0 !important; margin-left: 0 !important; }
+      &>*:last-child  { margin-bottom: 0 !important; margin-right: 0 !important; }
+    }
+
+    &>header {
+      @include eyecatcher;
+      margin: 40px auto;
+      @include when-fluid { margin-top: 0; }
+    }
+
+    &>footer {
+      font: $font-footer;
+      font-size: 75%;
+      margin-top: 5em;
+      color: $color-footer;
+      text-align: right;
+      a { color: $color-footer; }
+    }
   }
 
   // set body class to 'loading' to switch the curser to a 'loading' cursor.
@@ -12,13 +37,9 @@
     cursor: wait !important;
   }
 
-  a {
-    color: $color-link;
-  }
-
-  strong {
-    font-weight: bold;
-  }
+  a { color: $color-link; }
+  strong { font-weight: bold }
+  em { font-style: italic }
 
   hr {
     margin: 1.5em 0;
@@ -27,53 +48,4 @@
     background-color: rgba($color-text, 0.1);
     height: 1px;
   }
-
-  // make sure each first and last child element has no leading margin.
-  *:first-child { margin-top: 0 !important }
-  *:last-child { margin-bottom: 0 !important }
-
-  .container>header {
-    margin-top: 20px !important;
-
-    color: $color-title;
-    font: $font-header;
-    font-size: 120%;
-    line-height: 150%;
-
-    .site-title {
-      margin-bottom: 0.5em;
-
-      font: $font-header;
-      font-size: 200%;
-      font-weight: bold;
-      @include floaty-title($color-background, $color-title);
-    }
-  }
-
-  .container>footer {
-    font: $font-footer;
-    font-size: 75%;
-    margin-top: 5em;
-    color: $color-footer;
-    text-align: right;
-    a { color: $color-footer; }
-  }
-
-  // formatting of sections
-  section+section, article+section {
-    // border-top: 5px solid rgba($color-text, 0.1);
-    padding: 1em 0;
-  }
-}
-
-/* http://nicolasgallagher.com/micro-clearfix-hack/ */
-@mixin clearfix {
-  &:before, &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-  zoom: 1;
 }

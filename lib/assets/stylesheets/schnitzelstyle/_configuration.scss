@@ -1,6 +1,10 @@
-$container-width: 600px !default;
+$container-width: 800px !default;
+$section-padding: 20px !default;
 
-$font-default:    15px "Helvetica Neue","Arial",helvetica,sans-serif !default;
+// font configuration
+$font-default:    "Helvetica Neue","Arial",helvetica,sans-serif !default;
+$font-size:       15px;
+
 $font-header:     $font-default !default;
 $font-footer:     $font-header !default;
 $font-monospaced: 13px Menlo,Monaco,Courier !default;

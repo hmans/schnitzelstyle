@@ -1,9 +1,3 @@
-@mixin container {
-  width: $container-width;
-  margin: 0 auto;
-  background-color: $color-background;
-}
-
 @mixin row {
   @include clearfix;
   margin-bottom: 5px;
