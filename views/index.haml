@@ -43,12 +43,9 @@
   %pre.prettyprint
     %code.language-ruby
       :preserve
-        use Rack::Cache
+        def render
+          @@markdown ||= Redcarpet::Markdown.new(MarkdownRenderer,
+            :autolink => true, :space_after_headers => true, :fenced_code_blocks => true)
 
-        get '/schnitzelstyle-:version.css' do
-          scss :site
-        end
-
-        get '/' do
-          haml :index
+          @@markdown.render(body.to_s)
         end
