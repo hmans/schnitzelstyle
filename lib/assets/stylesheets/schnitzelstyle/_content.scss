@@ -98,7 +98,8 @@
 
     // code
     pre, code {
-      font: $font-monospaced;
+      font-family: $font-monospaced;
+      font-size: 95%;
     }
 
     p>code {
@@ -116,6 +117,7 @@
 
     pre>code {
       display: block;
+      line-height: 120%;
     }
 
     // media embeds
