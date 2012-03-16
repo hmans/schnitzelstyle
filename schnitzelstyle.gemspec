@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://schnitzelpress.org/schnitzelstyle/"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
+  gem.files         = `git ls-files lib LICENSE README.md`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "schnitzelstyle"
   gem.require_paths = ["lib"]
