@@ -1,0 +1,40 @@
+%section
+  %h2 Grid
+
+  %p Well, you know the drill.
+
+  .grid-demo
+    .row
+      - 12.times do
+        .one.column
+          %p 1
+    .row
+      - 6.times do
+        .two.columns
+          %p 2
+    .row
+      - 4.times do
+        .three.columns
+          %p 3
+    .row
+      - 3.times do
+        .four.columns
+          %p 4
+    .row
+      - 2.times do
+        .six.columns
+          %p 6
+    .row
+      .twelve.columns
+        %p 12
+    .row
+      .six.columns
+        %p 6
+      .three.columns
+        %p 3
+      .one.column
+        %p 1
+      .one.column
+        %p 1
+      .one.column
+        %p 1

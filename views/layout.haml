@@ -6,6 +6,16 @@
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
     %link{ :href => "/schnitzelstyle-site.css", :media => "screen, print", :rel => "stylesheet", :type => "text/css" }
   %body
+    %header
+      %h2 Schnitzelstyle.
+      %p A Sweet and Sassy CSS Toolkit with a Schnitzel Flavor.
+      %p
+        %a.button{href: '/'} Overview & Usage
+        %a.button{href: '/basics'} Basic Styles
+        %a.button{href: '/grid'} Grid
+        %a.button{href: '/buttons'} Buttons
+        %a.button{href: '/code'} Code
+
     = yield
 
     %footer.footer

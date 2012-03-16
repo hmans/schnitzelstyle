@@ -18,6 +18,10 @@ get '/schnitzelstyle-site.css' do
   scss :site
 end
 
+[:basics, :grid, :buttons, :code].each do |what|
+  get("/#{what}/?") { haml what }
+end
+
 get '/' do
   haml :index
 end

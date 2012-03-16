@@ -1,0 +1,14 @@
+%section
+  %h2 Syntax Highlighting
+  %p
+    Need to display some source code? Schnitzelstyle comes with built-in support
+    for <a href="http://code.google.com/p/google-code-prettify/">google-code-prettify</a>.
+  %pre.prettyprint
+    %code.language-ruby
+      :preserve
+        def render
+          @@markdown ||= Redcarpet::Markdown.new(MarkdownRenderer,
+            :autolink => true, :space_after_headers => true, :fenced_code_blocks => true)
+
+          @@markdown.render(body.to_s)
+        end
