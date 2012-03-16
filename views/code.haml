@@ -6,9 +6,16 @@
   %pre.prettyprint
     %code.language-ruby
       :preserve
-        def render
-          @@markdown ||= Redcarpet::Markdown.new(MarkdownRenderer,
-            :autolink => true, :space_after_headers => true, :fenced_code_blocks => true)
+        def finish
+          if status.to_i / 100 == 1
+            headers.delete "Content-Length"
+            headers.delete "Content-Type"
+          elsif Array === body and not [204, 304].include?(status.to_i)
+            headers["Content-Length"] = body.inject(0) { |l, p| l + Rack::Utils.bytesize(p) }.to_s
+          end
 
-          @@markdown.render(body.to_s)
+          # Rack::Response#finish sometimes returns self as response body. We don't want that.
+          status, headers, result = super
+          result = body if result == self
+          [status, headers, result]
         end

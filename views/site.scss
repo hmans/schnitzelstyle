@@ -4,6 +4,7 @@
   .column, .columns {
     @include small-type;
     @include border-radius(3px);
+    padding: 5px;
     background-color: #eee;
     color: #999;
     text-align: center;
