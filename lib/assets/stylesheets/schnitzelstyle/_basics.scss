@@ -14,12 +14,16 @@
       @include container;
       margin-top: 10px;
       padding: $gutter-width;
+
+      @include when-iphone {
+        padding: 10px;
+      }
     }
 
     &>header {
       @include eyecatcher;
       margin-top: 40px !important;
-      @include when-fluid { margin-top: 0; }
+      @include when-fluid { margin-top: 0 !important; }
     }
 
     &>footer {
@@ -29,6 +33,10 @@
       color: $color-footer;
       text-align: right;
       a { color: $color-footer; }
+    }
+
+    @include when-iphone {
+      font-size: 80%;
     }
   }
 
