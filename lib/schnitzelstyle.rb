@@ -1,6 +1,9 @@
 require "schnitzelstyle/version"
 require "sass"
 
+# boost the floating point precision
+Sass::Script::Number.precision = 9
+
 if defined?(Rails)
   # Load Rails engine
   require 'schnitzelstyle/rails'

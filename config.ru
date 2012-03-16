@@ -14,7 +14,7 @@ end
 
 use Rack::Cache
 
-get '/schnitzelstyle-:version.css' do
+get '/schnitzelstyle-site.css' do
   scss :site
 end
 

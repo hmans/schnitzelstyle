@@ -1,13 +1,21 @@
 @mixin row {
   @include clearfix;
-  margin-bottom: 5px;
+  margin-top: $gutter-width;
 }
 
 @mixin columns($num, $margin: 1.25%, $padding: 0%) {
-  $single-width: (100%) / 12;
+  $single-width: (100% + $margin) / 12;
 
-  width: $num * $single-width - $margin - 2 * $padding;
+  width: $num * $single-width - $margin;
   margin-right: $margin;
   padding: $padding;
   float: left;
+
+  &:last-child { margin-right: 0 !important; float: right;};
+
+  @include when-fluid {
+    float: none;
+    width: 100%;
+    margin-bottom: $gutter-width;
+  }
 }

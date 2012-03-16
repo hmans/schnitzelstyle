@@ -1,4 +1,7 @@
 @mixin schnitzel-basics {
+  *:first-child { margin-top: 0; margin-left: 0; }
+  *:last-child  { margin-bottom: 0; margin-right: 0; }
+
   body {
     @include box-model(border-box);
     padding: 0;
@@ -10,15 +13,12 @@
     &>section, &>article, &>header, &>footer {
       @include container;
       margin-top: 10px;
-      padding: $section-padding;
-
-      &>*:first-child { margin-top: 0 !important; margin-left: 0 !important; }
-      &>*:last-child  { margin-bottom: 0 !important; margin-right: 0 !important; }
+      padding: $gutter-width;
     }
 
     &>header {
       @include eyecatcher;
-      margin: 40px auto;
+      margin-top: 40px !important;
       @include when-fluid { margin-top: 0; }
     }
 

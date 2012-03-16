@@ -1,1 +1,11 @@
 @import 'schnitzelstyle/complete';
+
+.grid-demo {
+  .column, .columns {
+    @include small-type;
+    @include border-radius(3px);
+    background-color: #eee;
+    color: #999;
+    text-align: center;
+  }
+}
