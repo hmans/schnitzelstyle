@@ -79,11 +79,9 @@
 @mixin eyecatcher {
   background-color: rgba($color-text, 0.1);
   font-size: 140%;
-  p { line-height: 150%; }
+  p { line-height: 150% }
   h2 {
     font-size: 200%;
-    @include when-full {
-      font-size: 300%;
-    }
+    @include when-full { font-size: 300%; }
   }
 }

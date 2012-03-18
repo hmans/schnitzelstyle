@@ -1,6 +1,10 @@
 @import 'schnitzelstyle/complete';
 
 .grid-demo {
+  .row {
+    margin-top: 1em;
+  }
+
   .column, .columns {
     @include small-type;
     @include border-radius(3px);

@@ -1,6 +1,6 @@
 @mixin row {
   @include clearfix;
-  margin-top: $gutter-width;
+  margin: 1em 0;
 }
 
 @mixin columns($num, $margin: 1.25%, $padding: 0%) {
@@ -11,7 +11,7 @@
   padding: $padding;
   float: left;
 
-  &:last-child { margin-right: 0 !important; float: right;};
+  &:last-child { margin-right: 0 !important; };
 
   @include when-fluid {
     float: none;

@@ -1,7 +1,7 @@
 %section
   %h2 Grid
 
-  %p Well, you know the drill.
+  %p Sup dog, we herd you like grids to we put some grids into your grids and so on and so forth. Grids are percentage-based and fully responsive. Try resizing the browser window!
 
   .grid-demo
     .row
@@ -38,3 +38,33 @@
         %p 1
       .one.column
         %p 1
+
+  .row
+    .six.columns
+      %h2 HTML Example
+      %pre.prettyprint
+        %code.language-html
+          :preserve
+            &lt;div class="row"&gt;
+              &lt;div class="six columns"&gt;
+                &lt;p&gt;This uses half of the page.&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="three columns"&gt;
+                &lt;p&gt;This uses a third of the page.&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="three columns"&gt;
+                &lt;p&gt;This also uses a third of the page.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+    .six.columns
+      %h2 HAML Example
+      %pre.prettyprint
+        %code.language-html
+          :preserve
+            .row
+              .six.columns
+                %p This uses half of the page.
+              .three.columns
+                %p This uses a third of the page.
+              .three.columns
+                %p This also uses a third of the page.

@@ -1,12 +1,28 @@
-%section
-  %h2
-    Buttons
-    %small for you to click on
-  %p
-    Oh yes, Schnitzelstyle has buttons. Just use the <code>.button</code> class
-    in combination with your favorite color:
-  %p
-    %a.button{href: '/', data: { alert: 'sup!' }} .button
-    %a.red.button{href: '/'} .red.button
-    %a.green.button{href: '/'} .green.button
-    %a.blue.button{href: '/'} .blue.button
+%section.row
+  .six.columns
+    %h2
+      Buttons
+      %small for you to click on
+    %p
+      Oh yes, Schnitzelstyle has buttons. Just use the <code>.button</code> class
+      in combination with your favorite color:
+    %p
+      %a.button{href: '/', data: { alert: 'sup!' }} .button
+      %a.red.button{href: '/'} .red.button
+      %a.green.button{href: '/'} .green.button
+      %a.blue.button{href: '/'} .blue.button
+
+  .six.columns
+    %h2 Examples
+
+    %p A simple button:
+    %pre.prettyprint
+      %code
+        :preserve
+          &lt;a href="/signup" class="green"&gt;Sign up now!&lt;/a&gt;
+
+    %p Specifying a color:
+    %pre.prettyprint
+      %code
+        :preserve
+          &lt;a href="/signup" class="green button"&gt;Sign up now!&lt;/a&gt;
