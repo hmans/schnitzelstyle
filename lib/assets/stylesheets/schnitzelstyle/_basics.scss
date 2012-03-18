@@ -4,11 +4,15 @@
 
   body {
     @include box-model(border-box);
-    padding: 0;
+    padding: 40px 0;
     color: $color-text;
     background-color: $color-background;
     font-family: $font-default;
     font-size: $font-size;
+
+    @include when-fluid {
+      padding: 0 0 10px 0;
+    }
 
     &>section, &>article, &>header, &>footer {
       @include container;
@@ -22,8 +26,6 @@
 
     &>header {
       @include eyecatcher;
-      margin-top: 40px !important;
-      @include when-fluid { margin-top: 0 !important; }
     }
 
     &>footer {
@@ -45,9 +47,10 @@
     cursor: wait !important;
   }
 
-  a { color: $color-link; }
   strong { font-weight: bold }
   em { font-style: italic }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+  p, li { margin: 1em 0; }
 
   hr {
     margin: 1.5em 0;

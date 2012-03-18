@@ -8,6 +8,7 @@
 @include schnitzel-flashes;
 @include schnitzel-forms;
 @include schnitzel-eyecandy;
+@include schnitzel-embeds;
 @include schnitzel-responsive;
 
 .container       { @include container; }

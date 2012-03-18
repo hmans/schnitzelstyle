@@ -1,5 +1,5 @@
 @mixin schnitzel-content {
-  article, section, body>header {
+  article, section {
     // header
     &>header {
       // margin-bottom: 1em;
@@ -25,19 +25,10 @@
       line-height: 160%;
     }
 
-    p, li {
-      // @include justified;
-    }
-
     // links
     a {
       color: $color-link;
-      text-decoration: none;
-      border-bottom: 2px solid $color-link-underline;
-
-      &:hover {
-        color: $color-link-hover;
-      }
+      &:hover { color: $color-link-hover }
     }
 
     // lists
@@ -118,41 +109,6 @@
     pre>code {
       display: block;
       line-height: 120%;
-    }
-
-    // media embeds
-    .embedded {
-      position: relative;
-      $width: $container-width + 300px;
-      width: $width;
-      margin-left: -($width - $container-width) / 2;
-      overflow: hidden;
-
-      &.soundcloud {
-        height: 165px !important;
-      }
-
-      &.video {
-        &.vimeo {
-          height: ($width / 16) * 9;
-        }
-        &.youtube {
-          height: ($width / 16) * 9.5;
-        }
-      }
-
-      iframe, object, embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    // embedded tweets
-    .twp-container {
-      margin: 1.5em auto;
     }
   }
 }

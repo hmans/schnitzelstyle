@@ -21,9 +21,8 @@ $color-title:           $color-extra !default;
 $color-heading-background: mix($color-text, $color-background, 20%); //rgba($color-text, 0.18) !default;
 $color-heading-text:       $color-text !default;
 
-$color-link:            $color-text !default;
-$color-link-underline:  complement($color-extra) !default;
-$color-link-hover:      complement($color-extra) !default;
+$color-link:            $color-extra !default;
+$color-link-hover:      $color-extra !default;
 
 $color-error: #d33 !default;
 
