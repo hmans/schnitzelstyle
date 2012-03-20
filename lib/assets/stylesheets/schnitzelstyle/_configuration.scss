@@ -3,7 +3,8 @@ $gutter-width: 20px !default;
 
 // font configuration
 $font-default:    "Helvetica Neue","Arial",helvetica,sans-serif !default;
-$font-size:       15px;
+$font-size:       15px !default;
+$line-height:     20px !default;
 
 $font-header:     $font-default !default;
 $font-footer:     $font-header !default;
