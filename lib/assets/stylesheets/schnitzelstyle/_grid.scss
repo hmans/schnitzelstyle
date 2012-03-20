@@ -3,7 +3,7 @@
   margin: 1em 0;
 }
 
-@mixin columns($num, $margin: 1.25%, $padding: 0%) {
+@mixin columns($num, $margin: 1.25%, $padding: 0) {
   $single-width: (100% + $margin) / 12;
 
   width: $num * $single-width - $margin;
@@ -11,7 +11,8 @@
   padding: $padding;
   float: left;
 
-  &:last-child { margin-right: 0 !important; };
+  &:last-child { margin-right: 0 !important };
+  &:first-child { float: left };
 
   @include when-fluid {
     float: none;
