@@ -1,8 +1,0 @@
-@mixin container {
-  max-width: $container-width;
-  margin-left: auto !important;
-  margin-right: auto !important;
-
-  @include when-narrower-than(1020px) { max-width: 840px; }
-  @include when-narrower-than(840px) { max-width: 600px; }
-}

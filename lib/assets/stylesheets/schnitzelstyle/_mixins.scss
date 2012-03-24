@@ -6,7 +6,7 @@
 
 @mixin box-model($model) {
   @include vendorize(box-sizing, $model !important);
-  * { @include vendorize(box-sizing, $model !important); }
+  * { @include vendorize(box-sizing, inherit !important); }
 }
 
 @mixin justified {
@@ -33,4 +33,35 @@
     clear: both;
   }
   zoom: 1;
+}
+
+@mixin appear-on-hover($op-non-hover: 0.3, $op-hover: 1) {
+  opacity: $op-non-hover;
+  &:hover { opacity: $op-hover }
+}
+
+@mixin animated($time: 100ms, $method: ease-in-out, $properties: all) {
+  -webkit-transition-duration: $time;
+  -webkit-transition-timing-function: $method;
+  -webkit-transition-property: $properties;
+}
+
+@mixin box-shadow($x: 0, $y: 1px, $r: 2px, $color: rgba(0,0,0,.2), $inset: false) {
+  $s: $x $y $r $color;
+  @if ($inset) { $s: $s inset; }
+  @include vendorize(box-shadow, $s);
+}
+
+@mixin gradient($color) {
+  $color-from: lighten($color, 12%);
+  $color-to: darken($color, 12%);
+
+  background: $color-to;
+  background: -webkit-gradient(linear, left top, left bottom, from($color-from), to($color-to));
+  background: -moz-linear-gradient(top, $color-from, $color-to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+
+@mixin border-radius($radius) {
+  @include vendorize(border-radius, $radius);
 }
